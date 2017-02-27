@@ -1,0 +1,17 @@
+<md-card class="perro-card">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title>{{perro.title}}</md-card-title>
+    <md-card-subtitle>{{perro.breed}}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src="{{perro.image}}">
+  <md-card-content>
+    <p>
+      {{perro.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>

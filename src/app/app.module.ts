@@ -1,20 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
+import 'hammerjs';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { MaterialModule } from '@angular/material';
+import { PerroService} from './services/perro-service';
+import PerroCardComponent from './components/perro-card/perro-card';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { PerroListComponent } from './components/perro-list/perro-list.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    PerroListComponent,
+    PerroCardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule,
+    routing
   ],
-  providers: [],
+  providers: [PerroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
